@@ -2,14 +2,20 @@ import React from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
+import gallery1 from '@/assets/news-1.jpg';
+import gallery2 from '@/assets/news-2.jpg';
+import gallery3 from '@/assets/news-3.jpg';
+import gallery4 from '@/assets/news-4.jpg';
+import gallery5 from '@/assets/news-5.jpg';
+import gallery6 from '@/assets/news-6.jpg';
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1759047589470-a1e877b717aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "مبنى النادي الثقافي" },
-  { src: "https://images.unsplash.com/photo-1603801571246-be066de0c73b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "معرض الخط العربي" },
-  { src: "https://images.unsplash.com/photo-1651566222024-6df11f897be2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "عمارة الشارقة الإسلامية" },
-  { src: "https://images.unsplash.com/photo-1712366786881-e080e66fbf7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "أمسية شعرية" },
-  { src: "https://images.unsplash.com/photo-1621619856624-42fd193a0661?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "مكتبة النادي" },
-  { src: "https://images.unsplash.com/photo-1574169208507-84376144848b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg", title: "ورشة عمل فنية" },
+  { src: gallery1, title: "مبنى النادي الثقافي" },
+  { src: gallery2, title: "معرض الخط العربي" },
+  { src: gallery3, title: "عمارة الشارقة الإسلامية" },
+  { src: gallery4, title: "أمسية شعرية" },
+  { src: gallery5, title: "مكتبة النادي" },
+  { src: gallery6, title: "ورشة عمل فنية" },
 ];
 
 export const MasonryGallery: React.FC = () => {

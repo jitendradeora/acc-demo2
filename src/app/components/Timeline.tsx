@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-
+import { ImageWithFallback } from './figma/ImageWithFallback';
 const historyData = [
-  { year: '1981', title: 'التأسيس', description: 'تأسس النادي الثقافي العربي في الشارقة ليكون ملتقى للمثقفين والمبدعين العرب.' },
-  { year: '1995', title: 'المقر الدائم', description: 'انتقال النادي إلى مقره الحالي المتميز بتصميمه المعماري الإسلامي الفريد.' },
-  { year: '2005', title: 'موسوعة الثقافة', description: 'إطلاق أكبر مشروع لتوثيق الفعاليات الثقافية والأدبية في الإمارة.' },
-  { year: '2015', title: 'جائزة الإبداع', description: 'إطلاق جائزة النادي الثقافي العربي للإبداع الأدبي والفكري.' },
-  { year: '2023', title: 'التحول الرقمي', description: 'إطلاق المنصة الرقمية التفاعلية للنادي للوصول إلى جمهور أوسع عالمياً.' },
+  { year: '2025', Image: '@/assets/news-1.jpg',  title: 'التأسيس', description: 'تأسس النادي الثقافي العربي في الشارقة ليكون ملتقى للمثقفين والمبدعين العرب.' },
+  { year: '2020', Image: '@/assets/news-2.jpg',  title: 'المقر الدائم', description: 'انتقال النادي إلى مقره الحالي المتميز بتصميمه المعماري الإسلامي الفريد.' },
+  { year: '2015', Image: '@/assets/news-3.jpg', title: 'موسوعة الثقافة', description: 'إطلاق أكبر مشروع لتوثيق الفعاليات الثقافية والأدبية في الإمارة.' },
+  { year: '2010', Image: '@/assets/news-4.jpg',  title: 'جائزة الإبداع', description: 'إطلاق جائزة النادي الثقافي العربي للإبداع الأدبي والفكري.' },
+  { year: '2005', Image: '@/assets/news-5.jpg',  title: 'التحول الرقمي', description: 'إطلاق المنصة الرقمية التفاعلية للنادي للوصول إلى جمهور أوسع عالمياً.' },
 ];
 
 export const Timeline: React.FC = () => {
@@ -27,11 +27,14 @@ export const Timeline: React.FC = () => {
           >
             {/* Content Container */}
             <div className="w-full md:w-1/2 p-4">
+              
               <div className={`glass-card p-8 relative ${index % 2 === 0 ? 'md:mr-8 text-right' : 'md:ml-8 text-right md:text-left'}`}>
+                <ImageWithFallback src={item.Image} alt={item.title} className="w-full h-full object-cover mb-4" />
                 <span className="text-3xl font-black text-accent-purple/20 absolute top-4 left-4 md:left-auto md:right-4 font-tajawal">{item.year}</span>
                 <h3 className="text-xl font-bold mb-3 text-accent-purple">{item.title}</h3>
                 <p className="text-primary/70 leading-relaxed">{item.description}</p>
               </div>
+
             </div>
             
             {/* Dot on Line */}

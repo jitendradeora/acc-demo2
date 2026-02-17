@@ -11,6 +11,13 @@ import { ContactForm } from './components/ContactForm';
 import { SEO, OrganizationSchema } from './components/SEO';
 import { Toaster } from 'sonner';
 import { motion, AnimatePresence } from 'motion/react';
+import news1 from '@/assets/news-1.jpg';
+import news2 from '@/assets/news-2.jpg';
+import news3 from '@/assets/news-3.jpg';
+import news4 from '@/assets/news-4.jpg';
+import news5 from '@/assets/news-5.jpg';
+import news6 from '@/assets/news-6.jpg';
+import aboutImage from '@/assets/acc-banner-1.jpg';
 import { 
   MapPin, Phone, Mail, Clock, ChevronRight, Info, Users, 
   BookOpen, Award, CheckCircle, Calendar, User, Share2, 
@@ -42,7 +49,7 @@ const App: React.FC = () => {
       content: `نظم النادي الثقافي العربي فعالية خاصة للاحتفاء بيوم المخطوط العربي، شملت عرضاً لمخطوطات نادرة من المكتبة الخاصة للنادي. شهدت الفعالية حضوراً لافتاً من الباحثين والمختصين في التراث العربي، حيث تم تسليط الضوء على أهمية الحفاظ على المخطوطات ككنز معرفي لا يقدر بثمن.\n\nتضمنت الندوة المصاحبة ورش عمل حول ترميم المخطوطات القديمة باستخدام أحدث التقنيات العالمية، مع الحفاظ على أصالتها التاريخية. وأكد المتحدثون أن الشارقة، برؤية حاكمها، تولي اهتماماً استثنائياً بتوثيق التراث الفكري العربي وجعله متاحاً للأجيال القادمة.\n\nوفي ختام الفعالية، تم الإعلان عن مبادرة "رقمنة المخطوطات" التي سيبدأ النادي في تنفيذها بالتعاون مع جهات دولية متخصصة، لضمان وصول الباحثين حول العالم إلى هذه الموارد الثمينة بكل سهولة ويسر.`,
       date: '12 فبراير 2026', 
       author: 'إدارة النادي', 
-      image: 'https://images.unsplash.com/photo-1651566222024-6df11f897be2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg',
+      image: news1,
       category: 'فعاليات ثقافية',
       tags: ['تراث', 'مخطوطات', 'الشارقة', 'ثقافة']
     },
@@ -53,7 +60,51 @@ const App: React.FC = () => {
       content: `أعلن النادي عن فتح باب المشاركة في مسابقة القصة القصيرة السنوية المخصصة للمبدعين الشباب من سن 18 إلى 30 عاماً. تهدف المسابقة إلى اكتشاف المواهب الأدبية الشابة ودعمها وفتح آفاق الإبداع أمامها في مجال السرد القصصي.\n\nتتضمن شروط المسابقة أن يكون الموضوع مستوحى من قيم المجتمع العربي وأصالته، مع ضرورة الالتزام بقواعد اللغة العربية السليمة. وقد تم تشكيل لجنة تحكيم تضم نخبة من كبار الأدباء والنقاد العرب لتقييم الأعمال المشاركة.\n\nسيتم رصد جوائز قيمة للفائزين الثلاثة الأوائل، بالإضافة إلى طباعة القصص المتميزة في كتاب خاص يصدر عن النادي تزامناً مع معرض الشارقة الدولي للكتاب القادم. يُذكر أن الموعد النهائي لاستلام المشاركات هو نهاية شهر أبريل المقبل.`,
       date: '8 فبراير 2026', 
       author: 'اللجنة الثقافية', 
-      image: 'https://images.unsplash.com/photo-1712366786881-e080e66fbf7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg',
+      image: news2,
+      category: 'مسابقات',
+      tags: ['أدب', 'شباب', 'قصة قصيرة', 'إبداع']
+    },
+    { 
+      id: '3',
+      title: 'الشارقة تحتفي بيوم المخطوط العربي', 
+      excerpt: 'نظم النادي الثقافي العربي فعالية خاصة للاحتفاء بيوم المخطوط العربي، شملت عرضاً لمخطوطات نادرة من المكتبة الخاصة للنادي...', 
+      content: `نظم النادي الثقافي العربي فعالية خاصة للاحتفاء بيوم المخطوط العربي، شملت عرضاً لمخطوطات نادرة من المكتبة الخاصة للنادي. شهدت الفعالية حضوراً لافتاً من الباحثين والمختصين في التراث العربي، حيث تم تسليط الضوء على أهمية الحفاظ على المخطوطات ككنز معرفي لا يقدر بثمن.\n\nتضمنت الندوة المصاحبة ورش عمل حول ترميم المخطوطات القديمة باستخدام أحدث التقنيات العالمية، مع الحفاظ على أصالتها التاريخية. وأكد المتحدثون أن الشارقة، برؤية حاكمها، تولي اهتماماً استثنائياً بتوثيق التراث الفكري العربي وجعله متاحاً للأجيال القادمة.\n\nوفي ختام الفعالية، تم الإعلان عن مبادرة "رقمنة المخطوطات" التي سيبدأ النادي في تنفيذها بالتعاون مع جهات دولية متخصصة، لضمان وصول الباحثين حول العالم إلى هذه الموارد الثمينة بكل سهولة ويسر.`,
+      date: '12 فبراير 2026', 
+      author: 'إدارة النادي', 
+      image: news3,
+      category: 'فعاليات ثقافية',
+      tags: ['تراث', 'مخطوطات', 'الشارقة', 'ثقافة']
+    },
+    { 
+      id: '4',
+      title: 'إطلاق مسابقة القصة القصيرة للشباب', 
+      excerpt: 'أعلن النادي عن فتح باب المشاركة في مسابقة القصة القصيرة السنوية المخصصة للمبدعين الشباب من سن 18 إلى 30 عاماً...', 
+      content: `أعلن النادي عن فتح باب المشاركة في مسابقة القصة القصيرة السنوية المخصصة للمبدعين الشباب من سن 18 إلى 30 عاماً. تهدف المسابقة إلى اكتشاف المواهب الأدبية الشابة ودعمها وفتح آفاق الإبداع أمامها في مجال السرد القصصي.\n\nتتضمن شروط المسابقة أن يكون الموضوع مستوحى من قيم المجتمع العربي وأصالته، مع ضرورة الالتزام بقواعد اللغة العربية السليمة. وقد تم تشكيل لجنة تحكيم تضم نخبة من كبار الأدباء والنقاد العرب لتقييم الأعمال المشاركة.\n\nسيتم رصد جوائز قيمة للفائزين الثلاثة الأوائل، بالإضافة إلى طباعة القصص المتميزة في كتاب خاص يصدر عن النادي تزامناً مع معرض الشارقة الدولي للكتاب القادم. يُذكر أن الموعد النهائي لاستلام المشاركات هو نهاية شهر أبريل المقبل.`,
+      date: '8 فبراير 2026', 
+      author: 'اللجنة الثقافية', 
+      image: news4,
+      category: 'مسابقات',
+      tags: ['أدب', 'شباب', 'قصة قصيرة', 'إبداع']
+    },
+    { 
+      id: '5',
+      title: 'الشارقة تحتفي بيوم المخطوط العربي', 
+      excerpt: 'نظم النادي الثقافي العربي فعالية خاصة للاحتفاء بيوم المخطوط العربي، شملت عرضاً لمخطوطات نادرة من المكتبة الخاصة للنادي...', 
+      content: `نظم النادي الثقافي العربي فعالية خاصة للاحتفاء بيوم المخطوط العربي، شملت عرضاً لمخطوطات نادرة من المكتبة الخاصة للنادي. شهدت الفعالية حضوراً لافتاً من الباحثين والمختصين في التراث العربي، حيث تم تسليط الضوء على أهمية الحفاظ على المخطوطات ككنز معرفي لا يقدر بثمن.\n\nتضمنت الندوة المصاحبة ورش عمل حول ترميم المخطوطات القديمة باستخدام أحدث التقنيات العالمية، مع الحفاظ على أصالتها التاريخية. وأكد المتحدثون أن الشارقة، برؤية حاكمها، تولي اهتماماً استثنائياً بتوثيق التراث الفكري العربي وجعله متاحاً للأجيال القادمة.\n\nوفي ختام الفعالية، تم الإعلان عن مبادرة "رقمنة المخطوطات" التي سيبدأ النادي في تنفيذها بالتعاون مع جهات دولية متخصصة، لضمان وصول الباحثين حول العالم إلى هذه الموارد الثمينة بكل سهولة ويسر.`,
+      date: '12 فبراير 2026', 
+      author: 'إدارة النادي', 
+      image: news5,
+      category: 'فعاليات ثقافية',
+      tags: ['تراث', 'مخطوطات', 'الشارقة', 'ثقافة']
+    },
+    { 
+      id: '6',
+      title: 'إطلاق مسابقة القصة القصيرة للشباب', 
+      excerpt: 'أعلن النادي عن فتح باب المشاركة في مسابقة القصة القصيرة السنوية المخصصة للمبدعين الشباب من سن 18 إلى 30 عاماً...', 
+      content: `أعلن النادي عن فتح باب المشاركة في مسابقة القصة القصيرة السنوية المخصصة للمبدعين الشباب من سن 18 إلى 30 عاماً. تهدف المسابقة إلى اكتشاف المواهب الأدبية الشابة ودعمها وفتح آفاق الإبداع أمامها في مجال السرد القصصي.\n\nتتضمن شروط المسابقة أن يكون الموضوع مستوحى من قيم المجتمع العربي وأصالته، مع ضرورة الالتزام بقواعد اللغة العربية السليمة. وقد تم تشكيل لجنة تحكيم تضم نخبة من كبار الأدباء والنقاد العرب لتقييم الأعمال المشاركة.\n\nسيتم رصد جوائز قيمة للفائزين الثلاثة الأوائل، بالإضافة إلى طباعة القصص المتميزة في كتاب خاص يصدر عن النادي تزامناً مع معرض الشارقة الدولي للكتاب القادم. يُذكر أن الموعد النهائي لاستلام المشاركات هو نهاية شهر أبريل المقبل.`,
+      date: '8 فبراير 2026', 
+      author: 'اللجنة الثقافية', 
+      image: news6,
       category: 'مسابقات',
       tags: ['أدب', 'شباب', 'قصة قصيرة', 'إبداع']
     },
@@ -226,8 +277,8 @@ const App: React.FC = () => {
                          <div className="w-32 h-32 rounded-full bg-white/10 mx-auto mb-4 border border-white/20 overflow-hidden">
                            <ImageWithFallback src={`https://i.pravatar.cc/150?u=${i}`} alt="Member" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
                          </div>
-                         <h4 className="font-bold">عضو مجلس الإدارة</h4>
-                         <p className="text-white/40 text-sm">منصب إداري</p>
+                         <h4 className="font-bold">Title will be here</h4>
+                         <p className="text-white/40 text-sm">Role Description will be here</p>
                        </div>
                      ))}
                    </div>
@@ -346,7 +397,7 @@ const App: React.FC = () => {
                         <div className="aspect-video mb-4 rounded-xl overflow-hidden">
                            <ImageWithFallback src={n.image} alt={n.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                         </div>
-                        <span className="text-xs text-accent-purple font-bold mb-2 block">{n.date}</span>
+                        <span className="text-xs text-accent-purple font-bold mb-2">{n.date}</span>
                         <h3 className="text-xl font-bold mb-3 font-tajawal group-hover:text-accent-purple transition-colors">{n.title}</h3>
                         <p className="text-sm text-primary/60 mb-4 line-clamp-3 leading-relaxed">{n.excerpt}</p>
                         <button className="text-accent-purple font-bold text-sm flex items-center space-x-reverse space-x-1">
@@ -429,20 +480,7 @@ const App: React.FC = () => {
                   </div>
 
                   {/* Comments Section Placeholder */}
-                  <div className="mt-16 bg-secondary/30 p-10 rounded-[2rem] border border-primary/5">
-                    <h3 className="text-2xl font-bold mb-6 flex items-center space-x-reverse space-x-3">
-                      <MessageSquare size={24} className="text-accent-purple" />
-                      <span>التعليقات (0)</span>
-                    </h3>
-                    <p className="text-primary/40 mb-8 italic">لا توجد تعليقات بعد. كن أول من يشاركنا رأيه!</p>
-                    <div className="space-y-4">
-                      <textarea 
-                        placeholder="اكتب تعليقك هنا..." 
-                        className="w-full bg-white border border-primary/10 p-4 rounded-xl h-32 focus:outline-none focus:border-accent-purple"
-                      ></textarea>
-                      <button className="btn-primary">إرسال التعليق</button>
-                    </div>
-                  </div>
+                  
                 </article>
 
                 {/* Sidebar */}
@@ -507,7 +545,7 @@ const App: React.FC = () => {
                 <SectionTitle title="الشارقة: عاصمة الثقافة العربية والإسلامية" subtitle="ثقافة الشارقة" />
                 <div className="prose prose-lg max-w-none text-primary/80 leading-loose space-y-8 font-tajawal">
                   <div className="relative h-96 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
-                    <ImageWithFallback src="https://images.unsplash.com/photo-1759047589470-a1e877b717aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg" alt="Sharjah Culture" className="w-full h-full object-cover" />
+                    <ImageWithFallback src={aboutImage} alt="Sharjah Culture" className="w-full h-full object-cover" />
                   </div>
                   <p>
                     تعتبر إمارة الشارقة منارة ثقافية رائدة في المنطقة العربية، حيث أولى صاحب السمو الشيخ الدكتور سلطان بن محمد القاسمي، عضو المجلس الأعلى حاكم الشارقة، اهتماماً استثنائياً بالثقافة والفكر والفن كركائز أساسية لبناء الإنسان والمجتمع.
