@@ -3,44 +3,49 @@ import React from 'react';
 interface SEOProps {
   title: string;
   description: string;
-  type?: 'website' | 'article' | 'event';
-  schema?: any;
+  type?: string;
+  image?: string;
 }
 
-export const SEO: React.FC<SEOProps> = ({ title, description, type = 'website', schema }) => {
-  // In a real Next.js app, this would use next/head
-  // For this environment, we represent the meta logic here
-  return (
-    <>
-      {/* 
-        This is a conceptual SEO component. 
-        In Next.js App Router, this data would be in layout.tsx or page.tsx metadata.
-      */}
-      {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      )}
-    </>
-  );
-};
+export const SEO: React.FC<SEOProps> = ({ 
+  title, 
+  description, 
+  type = 'website',
+  image = 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200' 
+}) => {
+  const fullTitle = `${title} | النادي الثقافي العربي في الشارقة`;
+  
+  React.useEffect(() => {
+    document.title = fullTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+  }, [fullTitle, description]);
 
-export const OrganizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "النادي الثقافي العربي في الشارقة",
-  "url": "https://sharjahculturalclub.ae",
-  "logo": "https://sharjahculturalclub.ae/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+971-6-XXXXXXX",
-    "contactType": "customer service",
-    "areaServed": "AE",
-    "availableLanguage": "Arabic"
-  },
-  "sameAs": [
-    "https://facebook.com/sharjahculturalclub",
-    "https://twitter.com/sharjahculturalclub",
-    "https://instagram.com/sharjahculturalclub"
-  ]
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "النادي الثقافي العربي في الشارقة",
+    "url": "https://shjarabclub.ae",
+    "logo": "https://shjarabclub.ae/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971-6-567-2222",
+      "contactType": "customer service",
+      "areaServed": "AE",
+      "availableLanguage": "Arabic"
+    }
+  };
+
+  return (
+    <script type="application/ld+json">
+      {JSON.stringify(organizationSchema)}
+    </script>
+  );
 };

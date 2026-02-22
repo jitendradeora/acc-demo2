@@ -1,7 +1,5 @@
 
-  # Arabic RTL Cultural Website
-
-  This is a code bundle for Arabic RTL Cultural Website. The original project is available at https://www.figma.com/design/DIOilNvaWy3P1w0hEZTLiZ/Arabic-RTL-Cultural-Website.
+  # ACC Sharjah
 
   ## Running the code
 
